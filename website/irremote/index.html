@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IR Remote – Support</title>
+<meta name="description" content="Report a bug, suggest a feature or a missing device for IR Remote (epsilone1).">
+<style>
+  :root { --bg: #ffffff; --fg: #1c1b1f; --muted: #5f5c66; --accent: #a5452e; --card: #f6efec; --line: #e7dcd7; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #161211; --fg: #ede0dc; --muted: #b5a8a3; --accent: #ffb59e; --card: #231b19; --line: #3a2e2a; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--fg);
+         font: 16px/1.6 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+  main { max-width: 760px; margin: 0 auto; padding: 20px 16px 48px; }
+  header { display: flex; align-items: center; gap: 16px; margin: 8px 0 16px; }
+  header img { width: 72px; height: 72px; border-radius: 16px; flex: none; }
+  h1 { font-size: 1.5em; margin: 0; line-height: 1.25; }
+  h2 { font-size: 1.15em; margin: 24px 0 8px; color: var(--accent); }
+  p, li { margin: 0 0 10px; }
+  ul { padding-left: 20px; }
+  .muted { color: var(--muted); }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; margin: 16px 0; }
+  .lang-switch { display: flex; gap: 8px; justify-content: flex-end; }
+  .lang-switch button { font: inherit; padding: 4px 12px; border-radius: 999px; border: 1px solid var(--line);
+                        background: transparent; color: var(--fg); cursor: pointer; }
+  .lang-switch button[aria-pressed="true"] { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+  a { color: var(--accent); overflow-wrap: anywhere; }
+  iframe { border: 0; width: 100%; min-height: 1200px; border-radius: 12px; background: #fff; }
+  .warning { border: 2px dashed var(--accent); border-radius: 12px; padding: 14px 16px; }
+  footer { border-top: 1px solid var(--line); margin-top: 32px; padding-top: 12px; font-size: .95em; }
+  footer a { display: inline-block; margin: 0 16px 6px 0; }
+  .hidden { display: none !important; }
+</style>
+</head>
+<body>
+<main>
+  <div class="lang-switch">
+    <button type="button" data-set="en" aria-pressed="true">English</button>
+    <button type="button" data-set="fr" aria-pressed="false">Français</button>
+  </div>
+
+  <header>
+    <img src="icon.png" alt="IR Remote icon">
+    <div>
+      <h1 data-l="en">Support and feedback</h1>
+      <h1 data-l="fr" lang="fr">Support et suggestions</h1>
+      <div class="muted">IR Remote · epsilone1</div>
+    </div>
+  </header>
+
+  <section data-l="en">
+    <p><strong>IR Remote</strong> (in French: <em>Télécommande IR</em>) turns a phone with an infrared emitter into a
+      remote control for TVs, air conditioners, set-top boxes, projectors, fans, lights and more.</p>
+    <p>Use the form below to:</p>
+    <ul>
+      <li>report a <strong>bug</strong>;</li>
+      <li>suggest a <strong>new feature</strong>;</li>
+      <li>report a <strong>device, model or brand missing</strong> from the library (give the brand and model of the
+        device, and of its remote if you can);</li>
+      <li>ask any other question.</li>
+    </ul>
+    <div class="card">The version of the app is shown in <strong>Settings › About</strong>. For a bug, adding it with your
+      phone model and Android version helps a lot. No account is needed to send a message.</div>
+  </section>
+
+  <section data-l="fr" lang="fr">
+    <p><strong>Télécommande IR</strong> (en anglais : <em>IR Remote</em>) transforme un téléphone équipé d'un émetteur
+      infrarouge en télécommande pour téléviseurs, climatisations, décodeurs, vidéoprojecteurs, ventilateurs,
+      éclairages et plus encore.</p>
+    <p>Le formulaire ci-dessous permet de :</p>
+    <ul>
+      <li>signaler un <strong>bug</strong> ;</li>
+      <li>proposer une <strong>nouvelle fonctionnalité</strong> ;</li>
+      <li>signaler un <strong>appareil, modèle ou marque absent</strong> de la bibliothèque (indiquez la marque et le
+        modèle de l'appareil, et de sa télécommande si possible) ;</li>
+      <li>poser une autre question.</li>
+    </ul>
+    <div class="card">La version de l'application est indiquée dans <strong>Paramètres › À propos</strong>. Pour un bug,
+      l'ajouter avec le modèle du téléphone et la version d'Android aide beaucoup. Aucun compte n'est nécessaire pour
+      envoyer un message.</div>
+  </section>
+
+  <h2 data-l="en">Send a message</h2>
+  <h2 data-l="fr" lang="fr">Envoyer un message</h2>
+
+  <!-- Replace [GOOGLE_FORM_EMBED_URL] by the src of the "< >" embed code of the Google Form. -->
+  <iframe id="form" src="https://docs.google.com/forms/d/e/1FAIpQLSetYx0Jk3eiR4Zu_TfFug3oHJAHlNjZsfGlJYVKB1JAp1kwjQ/viewform?embedded=true" width="100%" height="1200" frameborder="0" title="Support form">Loading…</iframe>
+  <div id="form-missing" class="warning hidden">
+    <span data-l="en">The form is not set up yet. Please write to
+      <a href="mailto:epsilone.dev.pro@gmail.com">epsilone.dev.pro@gmail.com</a>.</span>
+    <span data-l="fr" lang="fr">Le formulaire n'est pas encore en place. Écrivez à
+      <a href="mailto:epsilone.dev.pro@gmail.com">epsilone.dev.pro@gmail.com</a>.</span>
+  </div>
+
+  <p class="muted" data-l="en">The form does not show? Write to
+    <a href="mailto:epsilone.dev.pro@gmail.com">epsilone.dev.pro@gmail.com</a>.</p>
+  <p class="muted" data-l="fr" lang="fr">Le formulaire ne s'affiche pas ? Écrivez à
+    <a href="mailto:epsilone.dev.pro@gmail.com">epsilone.dev.pro@gmail.com</a>.</p>
+
+  <footer>
+    <span data-l="en">
+      <a href="https://epsilone1.github.io/privacy/irremote_privacy.html">IR Remote privacy policy</a>
+      <a href="https://epsilone1.github.io/website/irremote/privacy.html">Privacy of this support page</a>
+    </span>
+    <span data-l="fr" lang="fr">
+      <a href="https://epsilone1.github.io/privacy/irremote_privacy.html">Confidentialité de Télécommande IR</a>
+      <a href="https://epsilone1.github.io/website/irremote/privacy.html">Confidentialité de cette page de support</a>
+    </span>
+    <div class="muted">© epsilone1 · <a href="mailto:epsilone.dev.pro@gmail.com">epsilone.dev.pro@gmail.com</a></div>
+  </footer>
+</main>
+<script>
+  // While the form address is still the placeholder, show the e-mail instead of an empty frame.
+  (function () {
+    var f = document.getElementById('form');
+    if (f.getAttribute('src').indexOf('GOOGLE_FORM_EMBED_URL') !== -1) {
+      f.classList.add('hidden');
+      document.getElementById('form-missing').classList.remove('hidden');
+    }
+  })();
+</script>
+<script>
+  // Language: French when the browser asks for it, English otherwise; the buttons switch.
+  (function () {
+    function show(lang) {
+      document.querySelectorAll('[data-l]').forEach(function (el) {
+        el.classList.toggle('hidden', el.getAttribute('data-l') !== lang);
+      });
+      document.querySelectorAll('.lang-switch button').forEach(function (b) {
+        b.setAttribute('aria-pressed', String(b.getAttribute('data-set') === lang));
+      });
+      document.documentElement.lang = lang;
+    }
+    var start = (navigator.language || 'en').toLowerCase().indexOf('fr') === 0 ? 'fr' : 'en';
+    document.querySelectorAll('.lang-switch button').forEach(function (b) {
+      b.addEventListener('click', function () { show(b.getAttribute('data-set')); });
+    });
+    show(start);
+  })();
+</script>
+</body>
+</html>
